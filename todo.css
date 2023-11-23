@@ -1,0 +1,160 @@
+    @import url("/fonts/fonts.css");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "iranyekan";
+        list-style: none;
+    }
+    
+     :root {
+        --primaryColor: #2b6777;
+        --secondaryColor: #c8d8e4;
+        --mainWhite: #fff;
+        --mainBlack: #222;
+        --mainGray: #7c7c7c;
+        --mainRed: #f40058;
+        --bodyColor: #f6f6f6;
+        --mainSpacing: 0, 1rem;
+        --mainTransition: all 0.3s linear;
+    }
+    
+    body {
+        font-family: "iranyekan";
+        color: var(--mainBlack);
+        background-color: var(--bodyColor);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header {
+        min-height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 2px solid var(--primaryColor);
+        border-radius: 10px;
+        padding: 0.7rem 1rem;
+    }
+    
+    .form-container {
+        display: flex;
+    }
+    
+    form {
+        width: 25rem;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    form input {
+        flex: 1;
+    }
+    
+    form input,
+    form button {
+        border: none;
+        outline: none;
+        background-color: var(--mainWhite);
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    
+    form button {
+        color: var(--primaryColor);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    form button:hover {
+        background-color: var(--primaryColor);
+        color: var(--mainWhite);
+    }
+    
+    .todo {
+        background-color: var(--secondaryColor);
+        justify-content: space-between;
+        align-items: center;
+        margin: 0.3rem 0;
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        width: 25rem;
+    }
+    
+    .todo li {
+        color: var(--primaryColor);
+        font-weight: bold;
+        flex: 1;
+    }
+    
+    .todo span {
+        display: block;
+        font-size: 1rem;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    
+    .fa-trash-alt {
+        color: var(--mainRed);
+    }
+    
+    .fa-check-square {
+        color: var(--primaryColor);
+    }
+    
+    .completed {
+        text-decoration: line-through;
+        opacity: 0.5;
+    }
+    
+    select {
+        appearance: none;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 1rem;
+        color: var(--primaryColor);
+    }
+    
+    .select {
+        margin-left: 1rem;
+        background-color: #fff;
+        cursor: pointer;
+        width: 10rem;
+        font-weight: bold;
+        position: relative;
+    }
+    
+    .select::after {
+        content: "\25BC";
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 1rem;
+        color: var(--primaryColor);
+        font-size: 1rem;
+    }
+    
+    @media only screen and (max-width: 720px) {
+        .container {
+            width: 97%;
+        }
+        .form-container {
+            flex-wrap: wrap;
+        }
+        .select {
+            margin-top: 10px;
+            margin-left: unset;
+        }
+        .todo {
+            width: 19rem;
+        }
+    }
